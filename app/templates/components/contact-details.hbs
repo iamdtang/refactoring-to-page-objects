@@ -1,0 +1,11 @@
+<h3 onclick={{action (mut detailsExpanded) true}}>
+  {{contact.firstName}} {{contact.lastName}}
+</h3>
+
+{{#if detailsExpanded}}
+  <div data-test="details">
+    <h4>Title: <span data-test="title">{{contact.title}}</span></h4>
+    <p>Job: <span data-test="job">{{contact.job}}</span></p>
+    <p>Job Description: <span data-test="job-description">{{contact.jobDescription}}</span></p>
+  </div>
+{{/if}}
